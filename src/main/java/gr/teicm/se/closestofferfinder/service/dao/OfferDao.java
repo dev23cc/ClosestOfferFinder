@@ -1,7 +1,7 @@
-package gr.myoffers.ws.wsoffer.dao;
+package gr.teicm.se.closestofferfinder.service.dao;
 
-import gr.myoffers.ws.wsoffer.model.*;
-import gr.myoffers.ws.wsoffer.util.HibernateUtil;
+import gr.teicm.se.closestofferfinder.service.model.Offer;
+import gr.teicm.se.closestofferfinder.service.util.HibernateUtil;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

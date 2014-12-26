@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.myoffers.ws.wsoffer.dao;
+package gr.teicm.se.closestofferfinder.service.dao;
 
-import gr.myoffers.ws.wsoffer.model.Offer;
+import gr.teicm.se.closestofferfinder.service.model.Offer;
 import java.util.List;
 
 /**

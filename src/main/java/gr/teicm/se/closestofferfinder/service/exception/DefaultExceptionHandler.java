@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.myoffers.ws.wsoffer.exception;
+package gr.teicm.se.closestofferfinder.service.exception;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

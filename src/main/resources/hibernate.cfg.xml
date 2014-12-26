@@ -3,19 +3,17 @@
 <hibernate-configuration>
   <session-factory>
     <!--Database Connection Settings -->
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/offers</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">27188</property>
-    <!--SQL dialect -->
+    <property name="hibernate.connection.password">t00r</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <!-- Write all execute SQL statements to stdout-->
     <!-- entity classes -->
     <property name="show_sql">true</property>
     <property name="current_session_context_class">thread</property>
-    <mapping class="gr.myoffers.ws.wsoffer.model.Offer"/>
-    <mapping class="gr.myoffers.ws.wsoffer.model.Store"/>
-    <mapping class="gr.myoffers.ws.wsoffer.model.Category"/>
+    <mapping class="gr.teicm.se.closestofferfinder.service.model.Offer" />
+    <mapping class="gr.teicm.se.closestofferfinder.service.model.Category" />
+    <mapping class="gr.teicm.se.closestofferfinder.service.model.Store" />
   </session-factory>
 </hibernate-configuration>
-

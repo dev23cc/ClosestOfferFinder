@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.myoffers.ws.wsoffer.model;
+package gr.teicm.se.closestofferfinder.service.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,8 +21,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 
 @Entity
-@Table(name="STORE")
-@XmlRootElement(name = "STORE")
+@Table(name="store")
+@XmlRootElement(name = "store")
 @XmlType(propOrder={"storeId","storeName","director","address","city","latitude","longitude"})
 
 public class Store {

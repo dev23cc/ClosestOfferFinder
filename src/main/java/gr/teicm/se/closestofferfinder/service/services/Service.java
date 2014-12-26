@@ -1,11 +1,10 @@
 
-package gr.myoffers.ws.wsoffer.services;
+package gr.teicm.se.closestofferfinder.service.services;
 
-import gr.myoffers.ws.wsoffer.dao.OfferDao;
-import gr.myoffers.ws.wsoffer.dao.StoreDao;
-import gr.myoffers.ws.wsoffer.model.Store;
-import gr.myoffers.ws.wsoffer.model.Offer;
-import gr.myoffers.ws.wsoffer.model.Response;
+import gr.teicm.se.closestofferfinder.service.dao.OfferDao;
+import gr.teicm.se.closestofferfinder.service.dao.StoreDao;
+import gr.teicm.se.closestofferfinder.service.model.Store;
+import gr.teicm.se.closestofferfinder.service.model.Offer;
 import static java.lang.Math.abs;
 import java.util.ArrayList;
 //import java.ua til.ArrayList;
@@ -49,7 +48,28 @@ public class Service {
     public List<Offer> getOffersByDiscJSON(@PathParam("disc") double disc){
         return offerDao.getOffersByDisc(disc);
     }
-    
+    @GET
+    @Path("/getTestOffer")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Offer> getTestOffer(){
+        List <Offer> dump = new ArrayList<>();
+        String str="";
+        Offer myoffer = new Offer();
+        if(offerDao.getAllOffers()!=null) {
+        dump = offerDao.getAllOffers();
+        
+        if (dump.get(1).getOfferName()==null) str="null";
+        else str=dump.get(1).getOfferName();
+        }
+        myoffer.setId(255);
+        myoffer.setOfferName("MyCustomOffer");
+        myoffer.setDescr("Inexpensive custom offer " + str);
+        myoffer.setDisc(90);
+        myoffer.setPrice(50);
+        List <Offer> offer= new ArrayList<>();
+        offer.add(myoffer);        
+        return (offer);
+    }
 //    @GET
 //    @Path("/getOffersByStoreJSON/{compId}")
 //    @Produces(MediaType.APPLICATION_JSON)
